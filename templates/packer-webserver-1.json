@@ -1,0 +1,30 @@
+{
+    "variables": {
+        "aws_access_key": "",
+        "aws_secret_key": "",
+        "aws_subnet_id":  "",
+        "aws_security_group": ""
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "region": "us-east-1",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "subnet_id": "{{user `aws_subnet_id`}}",
+            "security_group_id": "{{user `aws_security_group`}}",
+            "source_ami_filter": {
+                "filters": {
+                    "virtualization-type": "hvm",
+                    "name": "amzn2-ami-hvm-2.0.*-gp2",
+                    "root-device-type": "ebs"
+                },
+                "owners": ["amazon"],
+                "most_recent": true
+            },
+            "instance_type": "t2.micro",
+            "ssh_username": "ec2-user",
+            "ami_name": "amazon-ami-test_{{timestamp}}"
+        }
+    ]
+}
