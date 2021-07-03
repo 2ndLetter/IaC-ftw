@@ -1,9 +1,9 @@
 {
     "variables": {
-        "aws_access_key": "",
-        "aws_secret_key": "",
-        "aws_subnet_id":  "",
-        "aws_security_group": ""
+        "aws_access_key": "AKIA4NR3J2N7ZKHT5POH",
+        "aws_secret_key": "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",
+        "aws_subnet_id":  "subnet-06ec984b5807d731a",
+        "aws_security_group": "sg-030134f059477d260"
     },
     "builders": [
         {
@@ -16,7 +16,7 @@
             "source_ami_filter": {
                 "filters": {
                     "virtualization-type": "hvm",
-                    "name": "amzn2-ami-hvm-2.0.*-gp2",
+                    "name": "CentOS 7.9*",
                     "root-device-type": "ebs"
                 },
                 "owners": ["125523088429"],
