@@ -19,7 +19,7 @@
                     "name": "amzn2-ami-hvm-2.0.*-gp2",
                     "root-device-type": "ebs"
                 },
-                "owners": ["amazon"],
+                "owners": ["125523088429"],
                 "most_recent": true
             },
             "instance_type": "t2.micro",
