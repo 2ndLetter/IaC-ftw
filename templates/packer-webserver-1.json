@@ -27,5 +27,14 @@
             "ssh_username": "centos",
             "ami_name": "amazon-ami-test_{{timestamp}}"
         }
+    ],
+    "provisioners": [
+            {
+                "type": "shell",
+                "scripts": [
+                    "scripts/yum_update.sh",
+                    "scripts/install_software.sh"
+                ]
+            }
     ]
 }
