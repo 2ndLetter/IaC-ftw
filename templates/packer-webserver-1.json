@@ -17,6 +17,7 @@
                 "filters": {
                     "virtualization-type": "hvm",
                     "name": "CentOS 7.9*",
+                    "architecture": "x86_64",
                     "root-device-type": "ebs"
                 },
                 "owners": ["125523088429"],
