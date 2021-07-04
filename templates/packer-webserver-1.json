@@ -35,6 +35,11 @@
                     "scripts/yum_update.sh",
                     "scripts/install_software.sh"
                 ]
+            },
+            {
+                "type": "puppet-masterless",
+                "manifest_file": "manifest.pp",
+                "modules_paths": ["modules"]
             }
     ]
 }
