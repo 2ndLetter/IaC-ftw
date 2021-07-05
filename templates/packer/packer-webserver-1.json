@@ -33,7 +33,7 @@
                 "owners": ["125523088429"],
                 "most_recent": true
             },
-            "instance_type": "t2.micro",
+            "instance_type": "t2.medium",
             "ssh_username": "centos",
             "ami_name": "amazon-ami-test_{{timestamp}}"
         }
