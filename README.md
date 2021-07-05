@@ -11,6 +11,7 @@
 ## Task 3 - Configure via Puppet Local Modules
 - DO LAST
 ## Task 4 - Update Web Server via Packer/Puppet
-- IN PROGRESS
+- IN PROGRESS (4.1/4.2)
+- 4.3 DO LAST
 ## Task 5 - Deploy Infrastructure via Terraform
 ## Task 6 - Deploy Second ec2 Instance via Terraform
