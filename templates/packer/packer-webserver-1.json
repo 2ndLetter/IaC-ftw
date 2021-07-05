@@ -3,7 +3,7 @@
         "aws_access_key": "AKIAQZZXL6LHQDHQCFO3",
         "aws_secret_key": "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",
         "aws_subnet_id":  "subnet-0d43a398f409bac22",
-        "aws_security_group": "sg-08db2c9a3d9d0abba"
+        "aws_security_group": "sg-0d3ec1e94e8a03c15"
     },
     "builders": [
         {
