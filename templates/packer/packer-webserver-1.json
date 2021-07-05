@@ -42,9 +42,9 @@
             {
                 "type": "shell",
                 "scripts": [
-                    "scripts/yum_update.sh",
-                    "scripts/install_software.sh",
-                    "scripts/check-website.sh"
+                    "scripts/packer/yum_update.sh",
+                    "scripts/packer/install_software.sh",
+                    "scripts/packer/check-website.sh"
                 ]
             }
     ]
