@@ -34,7 +34,7 @@
                 "scripts": [
                     "scripts/yum_update.sh",
                     "scripts/install_software.sh",
-                    "scripts/check_website.sh"
+                    "scripts/check-website.sh"
                 ]
             },
             {
