@@ -13,10 +13,6 @@ vol_group_device=/dev/$block_device && echo $vol_group_device
 # Sync the disk
 sudo partprobe
 
-# add space to pv (which also adds free space to the VG)
-#phy_vol=`sudo pvs | grep /dev | sed -r 's/^[ \t]*//' | cut -d' ' -f1` && echo $phy_vol
-#sudo pvresize $phy_vol
-
 # Create new directory
 sudo mkdir /var/app
 
