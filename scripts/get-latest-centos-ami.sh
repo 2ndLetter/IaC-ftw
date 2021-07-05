@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 aws ec2 describe-images \
     --owners '125523088429' \
