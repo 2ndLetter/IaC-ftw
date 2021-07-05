@@ -44,7 +44,8 @@
                 "scripts": [
                     "scripts/packer/yum_update.sh",
                     "scripts/packer/install_software.sh",
-                    "scripts/packer/check-website.sh"
+                    "scripts/packer/check-website.sh",
+                    "scripts/packer/ebs.sh"
                 ]
             }
     ]
