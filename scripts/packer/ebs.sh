@@ -25,7 +25,7 @@ sudo mkdir /var/app
 sudo mount -t auto "$vol_group_device"1 /var/app
 
 # Find parition UUID
-UUID=`blkid | grep "$vol_group_device"1 | awk '{print $2}' | sed -e 's/"//g'`
+UUID=`sudo blkid | grep "$vol_group_device"1 | awk '{print $2}' | sed -e 's/"//g'`
 
 # Edit fstab file
 echo "$UUID /var/app ext4 defaults 0 2" | sudo tee -a /etc/fstab
