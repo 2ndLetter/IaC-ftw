@@ -36,11 +36,6 @@
                     "scripts/install_software.sh",
                     "scripts/check-website.sh"
                 ]
-            },
-            {
-                "type": "puppet-masterless",
-                "manifest_file": "manifest.pp",
-                "modules_paths": ["templates"]
             }
     ]
 }
