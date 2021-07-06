@@ -8,7 +8,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = ".templates/terraform/modules/vpc"
+  source = "./modules/vpc"
   region = var.main_region
 }
 
