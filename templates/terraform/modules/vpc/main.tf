@@ -13,7 +13,7 @@ resource "aws_subnet" "this" {
 
 data "aws_ami" "this" {
   most_recent = true
-  owners = ["125523088429"]
+  owners      = ["125523088429"]
 
   filter {
     name   = "architecture"
