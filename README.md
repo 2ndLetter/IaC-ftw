@@ -15,3 +15,7 @@
 - 4.3 DO LAST
 ## Task 5 - Deploy Infrastructure via Terraform
 ## Task 6 - Deploy Second ec2 Instance via Terraform
+
+1. Create VPC, Security Groups, S3 bucket, IAM Roles, Single Subnet, IGW, NACLs, and Route Tables (Terraform)
+2. Bake AMI (Packer, Puppet)
+3. Deploy 2 EC2 Instances from the AMI (Terraform)
