@@ -17,7 +17,7 @@
 ## Task 6 - Deploy Second ec2 Instance via Terraform
 
 1. Finish building out environment (s3 bucket, IAM Roles)
-2. Finish baking AMIs (Puppet configs, python script)
+2. Finish baking AMIs (importing terraform outputs, Puppet configs, python script)
 3. Deploy application
 
 Notes:
@@ -26,5 +26,8 @@ Notes:
 root script:
 - Install dependencies (local workstation)
 - Build environment (S3 bucket, IAM Roles)
+-- terraform -chdir=terraform init
+-- terraform -chdir=terraform plan
+-- terraform -chdir=terraform appy --auto-apply
 - Build AMI (Puppet configs, Python/Bash script for IP address)
 - Deploy Application

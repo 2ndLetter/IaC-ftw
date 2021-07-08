@@ -1,3 +1,6 @@
+packer build -var aws_subnet_id=$(terraform output subnet_id)  packer-webserver-1.json
+
+
 bmchadwick@ITSECFTW:~/work_dir/github/IaC-ftw/terraform$ terraform state list
 aws_instance.my-instance
 module.vpc.data.aws_ami.this

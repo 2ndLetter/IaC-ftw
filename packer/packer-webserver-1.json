@@ -1,7 +1,7 @@
 {
     "variables": {
-        "aws_access_key": "AKIAQMGYONXBS4ZD7PXM",
-        "aws_secret_key": "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",
+        "aws_access_key": "AKIAVC2GB2ZDPMBLWUY6",
+        "aws_secret_key": "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",
         "aws_subnet_id":  "subnet-009110065f387af57",
         "aws_security_group": "sg-00ce7672c2fd5138b"
     },
