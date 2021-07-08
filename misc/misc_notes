@@ -4,6 +4,7 @@ module.vpc.data.aws_ami.this
 module.vpc.aws_internet_gateway.gw
 module.vpc.aws_subnet.this
 module.vpc.aws_vpc.this
+
 bmchadwick@ITSECFTW:~/work_dir/github/IaC-ftw/terraform$ terraform state show module.vpc.aws_internet_gateway.gw
 # module.vpc.aws_internet_gateway.gw:
 resource "aws_internet_gateway" "gw" {
