@@ -1,3 +1,68 @@
+bmchadwick@ITSECFTW:~/work_dir/github/IaC-ftw/terraform$ terraform state list
+aws_instance.my-instance
+module.vpc.data.aws_ami.this
+module.vpc.aws_internet_gateway.gw
+module.vpc.aws_subnet.this
+module.vpc.aws_vpc.this
+bmchadwick@ITSECFTW:~/work_dir/github/IaC-ftw/terraform$ terraform state show module.vpc.aws_internet_gateway.gw
+# module.vpc.aws_internet_gateway.gw:
+resource "aws_internet_gateway" "gw" {
+    arn      = "arn:aws:ec2:us-east-1:026223734211:internet-gateway/igw-0475886aff74d63af"
+    id       = "igw-0475886aff74d63af"
+    owner_id = "026223734211"
+    tags     = {
+        "Name" = "IaC-FTW"
+    }
+    tags_all = {
+        "Name" = "IaC-FTW"
+    }
+    vpc_id   = "vpc-0aaf5a0dfebe2b389"
+}
+
+
+bmchadwick@ITSECFTW:~/work_dir/github/IaC-ftw/terraform$ terraform state show module.vpc.aws_subnet.this
+# module.vpc.aws_subnet.this:
+resource "aws_subnet" "this" {
+    arn                             = "arn:aws:ec2:us-east-1:026223734211:subnet/subnet-0cad57999e455ac61"
+    assign_ipv6_address_on_creation = false
+    availability_zone               = "us-east-1e"
+    availability_zone_id            = "use1-az3"
+    cidr_block                      = "10.0.1.0/24"
+    id                              = "subnet-0cad57999e455ac61"
+    map_customer_owned_ip_on_launch = false
+    map_public_ip_on_launch         = false
+    owner_id                        = "026223734211"
+    tags_all                        = {}
+    vpc_id                          = "vpc-0aaf5a0dfebe2b389"
+}
+
+
+bmchadwick@ITSECFTW:~/work_dir/github/IaC-ftw/terraform$ terraform state show module.vpc.aws_vpc.this
+# module.vpc.aws_vpc.this:
+resource "aws_vpc" "this" {
+    arn                              = "arn:aws:ec2:us-east-1:026223734211:vpc/vpc-0aaf5a0dfebe2b389"
+    assign_generated_ipv6_cidr_block = false
+    cidr_block                       = "10.0.0.0/16"
+    default_network_acl_id           = "acl-001294e8ad4f460fc"
+    default_route_table_id           = "rtb-088efd6e4aa8c8766"
+    default_security_group_id        = "sg-00dcd713de55b63fd"
+    dhcp_options_id                  = "dopt-027b6110ed0fdf054"
+    enable_classiclink               = false
+    enable_classiclink_dns_support   = false
+    enable_dns_hostnames             = false
+    enable_dns_support               = true
+    id                               = "vpc-0aaf5a0dfebe2b389"
+    instance_tenancy                 = "default"
+    main_route_table_id              = "rtb-088efd6e4aa8c8766"
+    owner_id                         = "026223734211"
+    tags_all                         = {}
+}
+
+
+
+
+
+
 data "aws_ssm_parameter" "this" {
   name = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
 

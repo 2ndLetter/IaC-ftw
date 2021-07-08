@@ -11,7 +11,7 @@ resource "aws_subnet" "this" {
   cidr_block = "10.0.1.0/24"
 }
 
-resource "aws_internet_gateway" "gw" {
+resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
 
   tags = {
