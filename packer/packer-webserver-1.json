@@ -33,7 +33,7 @@
                 "owners": ["125523088429"],
                 "most_recent": true
             },
-            "instance_type": "t2.medium",
+            "instance_type": "t3.micro",
             "ssh_username": "centos",
             "ami_name": "amazon-ami-test_{{timestamp}}"
         }
@@ -42,10 +42,10 @@
             {
                 "type": "shell",
                 "scripts": [
-                    "scripts/packer/yum_update.sh",
-                    "scripts/packer/install_software.sh",
-                    "scripts/packer/check-website.sh",
-                    "scripts/packer/ebs.sh"
+                    "scripts/yum_update.sh",
+                    "scripts/install_software.sh",
+                    "scripts/check-website.sh",
+                    "scripts/ebs.sh"
                 ]
             }
     ]
