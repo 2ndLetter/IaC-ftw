@@ -45,7 +45,8 @@
                     "scripts/yum_update.sh",
                     "scripts/install_software.sh",
                     "scripts/check-website.sh",
-                    "scripts/ebs.sh"
+                    "scripts/ebs.sh",
+                    "scripts/disable_selinux.sh"
                 ]
             }
     ]
