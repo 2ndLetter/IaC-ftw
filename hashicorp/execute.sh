@@ -2,7 +2,9 @@
 
 # Create random strings for s3
 
-export TF_VAR_bucket=IaCFTW-$(openssl rand -base64 24 | sed -e 's/+//g' -e 's/\///g')
+export BUCKET_NAME=IaCFTW-$(openssl rand -base64 24 | sed -e 's/+//g' -e 's/\///g')
+
+echo "The s3 bucket $BUCKET_NAME will be created"
 
 # Build AWS Environment
 terraform init
