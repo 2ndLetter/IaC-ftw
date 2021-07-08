@@ -11,6 +11,14 @@ resource "aws_subnet" "this" {
   cidr_block = "10.0.1.0/24"
 }
 
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.this.id
+
+  tags = {
+    Name = "iac-ftw"
+  }
+}
+
 data "aws_ami" "this" {
   most_recent = true
   owners      = ["125523088429"]
