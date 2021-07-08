@@ -105,3 +105,8 @@ resource "aws_iam_role" "web_server" {
     tag-key = "web_server"
   }
 }
+
+resource "aws_iam_instance_profile" "web_server" {
+  name = "web_server"
+  role = aws_iam_role.web_server.name
+}
