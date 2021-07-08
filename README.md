@@ -16,9 +16,15 @@
 ## Task 5 - Deploy Infrastructure via Terraform
 ## Task 6 - Deploy Second ec2 Instance via Terraform
 
-1. Create VPC, Security Groups, S3 bucket, IAM Roles, Single Subnet, IGW, NACLs, and Route Tables (Terraform)
-2. Bake AMI (Packer, Puppet)
-3. Deploy 2 EC2 Instances from the AMI (Terraform)
+1. Finish building out environment (s3 bucket, IAM Roles)
+2. Finish baking AMIs (Puppet configs, python script)
+3. Deploy application
 
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
+
+root script:
+- Install dependencies (local workstation)
+- Build environment (S3 bucket, IAM Roles)
+- Build AMI (Puppet configs, Python/Bash script for IP address)
+- Deploy Application
