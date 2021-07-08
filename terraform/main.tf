@@ -15,7 +15,7 @@ module "vpc" {
 resource "aws_instance" "my-instance" {
   ami                         = module.vpc.ami_id
   subnet_id                   = module.vpc.subnet_id
-  instance_type               = "t3.micro"
+  instance_type               = "t2.micro"
   associate_public_ip_address = true
 
   tags = {
