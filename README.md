@@ -26,10 +26,5 @@ Notes:
 root script:
 1. Install dependencies (local workstation)
 2. Build environment (S3 bucket, IAM Roles)
-    terraform -chdir=terraform init
-    terraform -chdir=terraform plan
-    terraform -chdir=terraform appy --auto-apply
-- Build AMI (Puppet configs, Python/Bash script for IP address)
-    packer validate packer/packer-webserver-1.json
-    packer -var aws_subnet_id=$(terraform -chdir=terraform output SUB_ID) aws_security_group=$(terraform -chdir=terraform output SSH_SG_ID)  build packer/packer-webserver-1.json 
-- Deploy Application
+3. Build AMI (Puppet configs, Python/Bash script for IP address)
+4. Deploy Application
