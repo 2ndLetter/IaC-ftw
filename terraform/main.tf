@@ -23,7 +23,7 @@ resource "aws_instance" "my-instance" {
   subnet_id                   = module.vpc.subnet_id
   instance_type               = "t2.micro"
   associate_public_ip_address = true
-  vpc_security_group_ids      = ["aws_security_group.allow_ssh.id"]
+  vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
 
   tags = {
     Name = "IaC-FTW"
