@@ -12,3 +12,8 @@ output "HTTP_SG_ID" {
   description = "HTTP Security Group ID"
   value       = aws_security_group.allow_http.id
 }
+
+output "SUB_ID" {
+  description = "Subnet ID"
+  value       = module.vpc.subnet_id
+}
