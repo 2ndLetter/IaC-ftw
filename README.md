@@ -25,6 +25,6 @@ Notes:
 
 root script:
 1. Install dependencies (local workstation)
-2. Build environment (S3 bucket, IAM Roles)
+2. Build environment (S3 bucket)
 3. Build AMI (Puppet configs, Python/Bash script for IP address)
-4. Deploy Application
+4. Deploy Application (Apply roles)

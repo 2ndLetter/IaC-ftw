@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Create random strings for s3
+
+export TF_VAR_bucket=IaCFTW-$(openssl rand -base64 24 | sed -e 's/+//g' -e 's/\///g')
+
 # Build AWS Environment
 terraform init
 sleep 5

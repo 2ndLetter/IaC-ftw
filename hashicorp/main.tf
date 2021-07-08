@@ -139,3 +139,7 @@ resource "aws_iam_instance_profile" "consumer" {
   name = "consumer"
   role = aws_iam_role.consumer.name
 }
+
+resource "aws_s3_bucket" "this" {
+  acl    = "private"
+}
