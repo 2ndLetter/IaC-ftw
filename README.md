@@ -19,3 +19,6 @@
 1. Create VPC, Security Groups, S3 bucket, IAM Roles, Single Subnet, IGW, NACLs, and Route Tables (Terraform)
 2. Bake AMI (Packer, Puppet)
 3. Deploy 2 EC2 Instances from the AMI (Terraform)
+
+Notes:
+- vpc cidr 10.0.0.0/16 needs to be available
