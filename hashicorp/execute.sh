@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # Create random strings for s3
 
