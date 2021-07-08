@@ -13,9 +13,9 @@ module "vpc" {
 }
 
 resource "aws_route" "r" {
-  route_table_id            = module.vpc.rt_id
-  destination_cidr_block    = "0.0.0.0/0"
-  gateway_id                = module.vpc.gw_id
+  route_table_id         = module.vpc.rt_id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = module.vpc.gw_id
 }
 
 resource "aws_instance" "my-instance" {
