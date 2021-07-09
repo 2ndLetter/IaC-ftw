@@ -23,9 +23,9 @@
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
 
-root script:
-1. Install dependencies if required (local workstation) [1-prep.sh]
-2. Create s3 bucket for remote state storage [2-s3-bucket.sh new_bucket] (use new_bucket option when creating the s3 bucket)
-3. Build environment (keypairs, validate s3 access)
-4. Build AMI (Puppet configs, Python/Bash script for IP address)
-5. Deploy Application (Apply roles)
+scripts:
+1. [1-prep.sh] Install dependencies if required (local workstation)
+2. [2-s3-bucket.sh] Create s3 bucket for remote state storage
+3. [3-build.sh] Build environment (keypairs) (use "./3-build.sh new_bucket" when creating the s3 bucket)
+4. [4-bake.sh] Bake AMI (Puppet configs, Python/Bash script for IP address)
+5. [5-deploy.sh] Deploy Application (Apply roles)
