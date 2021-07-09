@@ -1,3 +1,13 @@
+resource "aws_s3_bucket" "b" {
+  bucket = "mybestloookingbucketslsdffd"
+  acl = "private"
+  tags = {
+    Name = "My bucket"
+    Environment = "Dev"
+  }
+}
+
+
 openssl rand -base64 12 | sed -e 's/+//g' -e 's/\///g'
 
 packer build -var 'aws_subnet_id=$(terraform output -raw SUB_ID)' -var 'aws_security_group=$(terraform output -raw SSH_SG_ID)' packer-webserver-1.json
