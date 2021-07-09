@@ -101,6 +101,21 @@ resource "aws_iam_role" "web_server" {
     ]
   })
 
+  inline_policy {
+    name = "inline_policy_write"
+
+    policy = jsonencode({
+      Version = "2012-10-17"
+      Statement = [
+        {
+          Action  = ["s3:Put*"]
+          Effect  = "Allow"
+          Resource = "*"
+        }
+      ]
+    })
+  }
+
   tags = {
     tag-key = "web_server"
   }
