@@ -24,11 +24,12 @@ Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
 - Instructions need 33 bucket for state file added
 - Assumes local workstation has permisisons to aws account
+- Recommend looking into WSL2 (https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
 scripts:
 1. [1-prep.sh] Install dependencies if required (local workstation)
 2. [2-s3-bucket-build.sh] Create s3 bucket for build remote state storage
-3. [3-keypair.sh] Create keypair for ec2 instances
+3. [3-keypair.sh] Create keypair for ec2 instances (enter the name of the keypair you want as an option)
 4. [4-build.sh] Build environment (use "./3-build.sh new_bucket" when creating the s3 bucket)
 5. [5-bake.sh] Bake AMI (Puppet configs, Python/Bash script for IP address)
 6. [6-s3-bucket-app.sh] Create s3 bucket for app remote state storage

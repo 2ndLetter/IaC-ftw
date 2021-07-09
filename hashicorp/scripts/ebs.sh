@@ -15,6 +15,9 @@ vol_group_device=/dev/$block_device && echo $vol_group_device
 # Sync the disk
 sudo partprobe
 
+# Sleep to avoid "Could not stat" error
+sleep 10
+
 # Format the partition
 sudo mkfs -t ext4 "$vol_group_device"1
 
