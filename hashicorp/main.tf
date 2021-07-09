@@ -145,6 +145,21 @@ resource "aws_iam_role" "consumer" {
     ]
   })
 
+  inline_policy {
+    name = "inline_policy_read"
+
+    policy = jsonencode({
+      Version = "2012-10-17"
+      Statement = [
+        {
+          Action  = ["s3:Get*"]
+          Effect  = "Allow"
+          Resource = "*"
+        }
+      ]
+    })
+  }
+
   tags = {
     tag-key = "consumer"
   }
