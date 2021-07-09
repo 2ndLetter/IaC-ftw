@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 ## This assumes your local development workstation is RHEL7/Centos7
 
