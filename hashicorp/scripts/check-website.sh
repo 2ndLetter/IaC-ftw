@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash -e
 
 sleep 30s
 

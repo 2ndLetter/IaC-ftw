@@ -29,7 +29,9 @@
             },
             "instance_type": "t2.micro",
             "ssh_username": "centos",
-            "ami_name": "amazon-ami-test_{{timestamp}}"
+            "ami_name": "proving_grounds_{{timestamp}}",
+            "force_deregister": "true",
+            "force_delete_snapshot": "true"
         }
     ],
     "provisioners": [

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash -e
 
 # Find the block device
 block_device=`lsblk -a -d -e 230 | grep $? | cut -d' ' -f1 | sed -n 2p` && echo $block_device
