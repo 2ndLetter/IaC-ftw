@@ -21,12 +21,21 @@ data "aws_subnet" "consumer" {
   }
 }
 
+data "aws_security_group" "http" {
+  name   = "allow_http"
+}
+
+data "aws_security_group" "ssh" {
+  name   = "allow_ssh"
+}
+
 resource "aws_instance" "webserver" {
   ami                         = data.aws_ami.this.id
   subnet_id                   = data.aws_subnet.webserver.id
   instance_type               = "t2.micro"
   associate_public_ip_address = true
   key_name                    = var.key_name
+  vpc_security_group_ids      = [data.aws_security_group.ssh.id, data.aws_security_group.http.id]
 
   tags = {
     Name = "webserver"
@@ -39,6 +48,7 @@ resource "aws_instance" "consumer" {
   instance_type               = "t2.micro"
   associate_public_ip_address = true
   key_name                    = var.key_name
+  vpc_security_group_ids      = [data.aws_security_group.http.id]
 
   tags = {
     Name = "consumer"
