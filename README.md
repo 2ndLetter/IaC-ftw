@@ -33,4 +33,4 @@ scripts:
 4. [4-build.sh][new_bucket] Build environment (use "./3-build.sh new_bucket" when creating the s3 bucket)
 5. [5-bake.sh] Bake AMI (Puppet configs, Python/Bash script for IP address)
 6. [6-s3-bucket-app.sh] Create s3 bucket for app remote state storage
-7. [7-deploy.sh] Deploy Application (Apply roles, keypairs)
+7. [7-deploy.sh] Deploy Application (ASGs, Launch Configs, fix keypair format, check selinux, userdata yum update)
