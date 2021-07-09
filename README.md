@@ -22,12 +22,14 @@
 
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
-- need to add s3 bucket for state file
+- Instructions need 33 bucket for state file added
+- Assumes local workstation has permisisons to aws account
 
 scripts:
 1. [1-prep.sh] Install dependencies if required (local workstation)
-2. [2-s3-bucket.sh] Create s3 bucket for remote state storage
+2. [2-s3-bucket-build.sh] Create s3 bucket for build remote state storage
 3. [3-keypair.sh] Create keypair for ec2 instances
-4. [4-build.sh] Build environment (keypairs) (use "./3-build.sh new_bucket" when creating the s3 bucket)
+4. [4-build.sh] Build environment (use "./3-build.sh new_bucket" when creating the s3 bucket)
 5. [5-bake.sh] Bake AMI (Puppet configs, Python/Bash script for IP address)
-6. [6-deploy.sh] Deploy Application (Apply roles)
+6. [6-s3-bucket-app.sh] Create s3 bucket for app remote state storage
+7. [7-deploy.sh] Deploy Application (Apply roles, keypairs)
