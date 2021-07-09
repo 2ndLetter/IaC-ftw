@@ -13,7 +13,7 @@ output "HTTP_SG_ID" {
   value       = aws_security_group.allow_http.id
 }
 
-output "SUB_ID" {
+output "SUB_ID_WEBSERVER" {
   description = "Subnet ID"
-  value       = module.vpc.subnet_id
+  value       = module.vpc.subnet_id_webserver
 }

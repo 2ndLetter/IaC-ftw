@@ -26,6 +26,6 @@ Notes:
 scripts:
 1. [1-prep.sh] Install dependencies if required (local workstation)
 2. [2-s3-bucket.sh] Create s3 bucket for remote state storage
-3. [3-build.sh] Build environment (keypairs) (use "./3-build.sh new_bucket" when creating the s3 bucket)
+3. [3-build.sh] Build environment (subnets ,keypairs) (use "./3-build.sh new_bucket" when creating the s3 bucket)
 4. [4-bake.sh] Bake AMI (Puppet configs, Python/Bash script for IP address)
 5. [5-deploy.sh] Deploy Application (Apply roles)

@@ -1,5 +1,9 @@
-output "subnet_id" {
-  value = aws_subnet.this.id
+output "subnet_id_webserver" {
+  value = aws_subnet.webserver.id
+}
+
+output "subnet_id_consumer" {
+  value = aws_subnet.consumer.id
 }
 
 output "rt_id" {

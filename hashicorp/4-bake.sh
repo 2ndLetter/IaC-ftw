@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Export required terraform outputs
-export aws_subnet_id=$(terraform output -raw SUB_ID)
+export aws_subnet_id=$(terraform output -raw SUB_ID_WEBSERVER)
 export aws_security_group=$(terraform output -raw SSH_SG_ID)
 
 # Validate Packer template
