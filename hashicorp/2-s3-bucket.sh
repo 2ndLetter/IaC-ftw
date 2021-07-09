@@ -11,5 +11,5 @@ aws s3 ls
 
 # Create backend.tf file
 
-printf "terraform {\n  backend \"s3\" {\n    bucket = \"$BUCKET_NAME\"\n    region = \"us-east-1\"\n    key = \"terraform.tfstate\"\n  }\n}" > backend.tf
+printf "terraform {\n  backend \"s3\" {\n    bucket = \"$BUCKET_NAME\"\n    region = \"us-east-1\"\n    key =    \"terraform.tfstate\"\n  }\n}" > backend.tf
 

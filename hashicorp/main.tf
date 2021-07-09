@@ -108,8 +108,8 @@ resource "aws_iam_role" "web_server" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action  = ["s3:Put*"]
-          Effect  = "Allow"
+          Action   = ["s3:Put*"]
+          Effect   = "Allow"
           Resource = "*"
         }
       ]
@@ -152,8 +152,8 @@ resource "aws_iam_role" "consumer" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action  = ["s3:Get*"]
-          Effect  = "Allow"
+          Action   = ["s3:Get*"]
+          Effect   = "Allow"
           Resource = "*"
         }
       ]
@@ -172,5 +172,5 @@ resource "aws_iam_instance_profile" "consumer" {
 
 resource "aws_s3_bucket" "b" {
   bucket = var.bucket_name
-  acl = "private"
+  acl    = "private"
 }
