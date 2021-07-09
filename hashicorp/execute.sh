@@ -2,18 +2,25 @@
 
 # Create random strings for s3
 
-export BUCKET_NAME=iacftw-$(openssl rand -base64 24 | sed -e 's/+//g' -e 's/\///g' -e 's/[A-Z]//g')
+if [[ $1 == new_bucket ]]
+then
+  export BUCKET_NAME=iacftw-$(openssl rand -base64 48 | sed -e 's/+//g' -e 's/\///g' -e 's/[A-Z]//g')
+  printf "bucket_name = \"$BUCKET_NAME\"" > terraform.tfvars
+else
+  echo "no bucket names changed"
+fi
 #export BUCKET_NAME=iacftw-TWsdkljkdlfj
 
 echo "The s3 bucket $BUCKET_NAME will be created"
 
 # Build AWS Environment
-terraform init
+#terraform init
 #sleep 5
-#terraform plan
-terraform plan -var="bucket_name=$BUCKET_NAME"
+terraform plan
+#terraform plan -var="bucket_name=$BUCKET_NAME"
 #sleep 5
-terraform apply -var="bucket_name=$BUCKET_NAME" --auto-approve
+terraform apply --auto-approve
+#terraform apply -var="bucket_name=$BUCKET_NAME" --auto-approve
 #sleep 10
 
 ### Export required terraform outputs
