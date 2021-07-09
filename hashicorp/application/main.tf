@@ -9,14 +9,14 @@ provider "aws" {
 
 data "aws_subnet" "webserver" {
   filter {
-    name = "tag:Name"
+    name   = "tag:Name"
     values = ["IaC-FTW-webserver"]
   }
 }
 
 data "aws_subnet" "consumer" {
   filter {
-    name = "tag:Name"
+    name   = "tag:Name"
     values = ["IaC-FTW-consumer"]
   }
 }
@@ -26,6 +26,7 @@ resource "aws_instance" "webserver" {
   subnet_id                   = data.aws_subnet.webserver.id
   instance_type               = "t2.micro"
   associate_public_ip_address = true
+  key_name                    = var.key_name
 
   tags = {
     Name = "webserver"
@@ -37,6 +38,7 @@ resource "aws_instance" "consumer" {
   subnet_id                   = data.aws_subnet.consumer.id
   instance_type               = "t2.micro"
   associate_public_ip_address = true
+  key_name                    = var.key_name
 
   tags = {
     Name = "consumer"

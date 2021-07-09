@@ -1,5 +1,5 @@
 *.tfstate*
 *.hcl
 *.terraform/*
-terraform.tfvars
+terraform.tfvars*
 backend.tf
