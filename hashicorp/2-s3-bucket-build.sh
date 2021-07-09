@@ -9,7 +9,9 @@ aws s3api create-bucket --bucket $BUCKET_NAME
 # Verify creation
 aws s3 ls
 
-# Create backend.tf file
-
+# Create backend.tf file build workspace
 printf "terraform {\n  backend \"s3\" {\n    bucket = \"$BUCKET_NAME\"\n    region = \"us-east-1\"\n    key =    \"terraform.tfstate\"\n  }\n}" > backend.tf
 
+# Create terraform.tfvars file for deploy workspace
+printf "bucket_name = \"$BUCKET_NAME\"" > terraform.tfvars
+#printf "terraform {\n  backend \"s3\" {\n    bucket = \"$BUCKET_NAME\"\n    region = \"us-east-1\"\n    key =    \"terraform.tfstate\"\n  }\n}" > application/backend.tf
