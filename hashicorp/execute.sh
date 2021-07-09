@@ -10,6 +10,9 @@ else
 fi
 echo "The s3 bucket $BUCKET_NAME will be created"
 
+terraform init
+sleep 5
+
 terraform plan
 sleep 5
 
