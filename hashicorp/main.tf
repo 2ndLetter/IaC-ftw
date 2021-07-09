@@ -108,7 +108,7 @@ resource "aws_iam_role" "web_server" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   = ["s3:Put*"]
+          Action   = ["s3:Put*", "s3:List*"]
           Effect   = "Allow"
           Resource = "*"
         }
@@ -152,7 +152,7 @@ resource "aws_iam_role" "consumer" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   = ["s3:Get*"]
+          Action   = ["s3:Get*", "s3:List*"]
           Effect   = "Allow"
           Resource = "*"
         }

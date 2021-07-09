@@ -12,6 +12,7 @@ sudo yum -y install terraform
 
 # Install aws cli
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo yum -y install unzip
 unzip awscliv2.zip
 sudo ./aws/install
 
