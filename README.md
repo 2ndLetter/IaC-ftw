@@ -29,8 +29,8 @@ Notes:
 scripts:
 1. [1-prep.sh] Install dependencies if required (local workstation)
 2. [2-s3-bucket-build.sh] Create s3 bucket for build remote state storage
-3. [3-keypair.sh] Create keypair for ec2 instances (enter the name of the keypair you want as an option)
-4. [4-build.sh] Build environment (use "./3-build.sh new_bucket" when creating the s3 bucket)
+3. [3-keypair.sh][option] Create keypair for ec2 instances (enter the name of the keypair you want as an option)
+4. [4-build.sh][option] Build environment (use "./3-build.sh new_bucket" when creating the s3 bucket)
 5. [5-bake.sh] Bake AMI (Puppet configs, Python/Bash script for IP address)
 6. [6-s3-bucket-app.sh] Create s3 bucket for app remote state storage
 7. [7-deploy.sh] Deploy Application (Apply roles, keypairs)

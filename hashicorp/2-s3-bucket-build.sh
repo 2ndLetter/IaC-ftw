@@ -13,5 +13,4 @@ aws s3 ls
 printf "terraform {\n  backend \"s3\" {\n    bucket = \"$BUCKET_NAME\"\n    region = \"us-east-1\"\n    key =    \"terraform.tfstate\"\n  }\n}" > backend.tf
 
 # Create terraform.tfvars file for deploy workspace
-printf "bucket_name = \"$BUCKET_NAME\"" > terraform.tfvars
-#printf "terraform {\n  backend \"s3\" {\n    bucket = \"$BUCKET_NAME\"\n    region = \"us-east-1\"\n    key =    \"terraform.tfstate\"\n  }\n}" > application/backend.tf
+printf "bucket_name = \"$BUCKET_NAME\"" > application/terraform.tfvars
