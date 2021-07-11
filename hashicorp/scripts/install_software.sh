@@ -7,7 +7,7 @@ sudo yum -y install httpd
 sudo systemctl start httpd && sudo systemctl enable httpd
 
 # Install Puppet
-sudo rpm -Uvh https://yum.puppet.com/puppet7-release-el-8.noarch.rpm
+sudo rpm -Uvh https://yum.puppet.com/puppet6-release-el-7.noarch.rpm
 
 # Install Puppet Agent
 sudo yum install puppet-agent -y
@@ -16,3 +16,5 @@ sudo yum install puppet-agent -y
 echo 'Defaults secure_path = /sbin:/bin:/usr/sbin/usr/bin:/opt/puppetlabs/bin' | sudo tee -a /etc/sudoers.d/extra
 
 bash
+
+puppet agent --version
