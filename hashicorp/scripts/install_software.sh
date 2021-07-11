@@ -15,6 +15,8 @@ sudo yum install puppet-agent -y
 # Add secure_path
 echo 'Defaults secure_path = /sbin:/bin:/usr/sbin/usr/bin:/opt/puppetlabs/bin' | sudo tee -a /etc/sudoers.d/extra
 
+# Reload bash
 bash
 
-puppet agent --version
+# Check Installed Puppet Agent version
+sudo puppet agent --version
