@@ -48,6 +48,7 @@ resource "aws_launch_configuration" "webserver" {
   name          = "webserver"
   image_id      = data.aws_ami.this.id
   instance_type = "t2.micro"
+  user_data     = "${file("scripts/install_software.sh")}"
 }
 
 resource "aws_autoscaling_group" "webserver" {
@@ -68,6 +69,7 @@ resource "aws_launch_configuration" "consumer" {
   name          = "consumer"
   image_id      = data.aws_ami.this.id
   instance_type = "t2.micro"
+  user_data     = "${file("scripts/install_software.sh")}"
 }
 
 resource "aws_autoscaling_group" "consumer" {
