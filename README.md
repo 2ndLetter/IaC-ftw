@@ -22,7 +22,7 @@
 
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
-- Instructions need 33 bucket for state file added
+- Instructions need s3 bucket for state file added
 - Assumes local workstation has permisisons to aws account
 - Recommend looking into WSL2 (https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
