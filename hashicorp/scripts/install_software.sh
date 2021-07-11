@@ -21,22 +21,22 @@ bash
 # Check Installed Puppet Agent version
 sudo puppet agent --version
 
-# Install python3 and Boto3 [temp config until Puppet is implemented]
-sudo yum groupinstall "Development Tools" -y
-sudo yum install openssl-devel libffi-devel bzip2-devel -y
-sudo yum install wget -y
-sudo yum install epel-release
-wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
-tar xvf Python-3.9.6.tgz
-cd Python-3.9*/
-./configure --enable-optimizations
-sudo make altinstall
-
-# Check Python Installation
-python3.9 --version
-
-# Check pip installation
-pip3.9 --version
-
-# Install boto
-pip3 install boto botocore boto3 --upgrade --user
+### Install python3 and Boto3 [temp config until Puppet is implemented]
+##sudo yum groupinstall "Development Tools" -y
+##sudo yum install openssl-devel libffi-devel bzip2-devel -y
+##sudo yum install wget -y
+##sudo yum install epel-release
+##wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
+##tar xvf Python-3.9.6.tgz
+##cd Python-3.9*/
+##./configure --enable-optimizations
+##sudo make altinstall
+##
+### Check Python Installation
+##python3.9 --version
+##
+### Check pip installation
+##pip3.9 --version
+##
+### Install boto
+##pip3 install boto botocore boto3 --upgrade --user
