@@ -51,6 +51,7 @@ resource "aws_launch_configuration" "webserver" {
   iam_instance_profile = "web_server"
   user_data     = "${file("scripts/webserver_userdata.sh")}"
   security_groups      = [data.aws_security_group.ssh.id, data.aws_security_group.http.id]
+  key_name                    = var.key_name
 }
 
 resource "aws_autoscaling_group" "webserver" {
@@ -74,6 +75,7 @@ resource "aws_launch_configuration" "consumer" {
   iam_instance_profile = "web_server"
   user_data     = "${file("scripts/consumer_userdata.sh")}"
   security_groups      = [data.aws_security_group.http.id]
+  key_name                    = var.key_name
 }
 
 resource "aws_autoscaling_group" "consumer" {
