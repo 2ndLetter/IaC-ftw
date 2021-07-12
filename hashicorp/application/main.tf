@@ -48,6 +48,7 @@ resource "aws_launch_configuration" "webserver" {
   name          = "webserver"
   image_id      = data.aws_ami.this.id
   instance_type = "t2.micro"
+  iam_instance_profile = "web_server"
   user_data     = "${file("scripts/webserver_userdata.sh")}"
 }
 
@@ -69,6 +70,8 @@ resource "aws_launch_configuration" "consumer" {
   name          = "consumer"
   image_id      = data.aws_ami.this.id
   instance_type = "t2.micro"
+  iam_instance_profile = "web_server"
+  user_data     = "${file("scripts/consumer_userdata.sh")}"
 }
 
 resource "aws_autoscaling_group" "consumer" {
