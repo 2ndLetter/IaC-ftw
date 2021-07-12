@@ -50,6 +50,7 @@ resource "aws_launch_configuration" "webserver" {
   instance_type = "t2.micro"
   iam_instance_profile = "web_server"
   user_data     = "${file("scripts/webserver_userdata.sh")}"
+  security_groups      = [data.aws_security_group.ssh.id, data.aws_security_group.http.id]
 }
 
 resource "aws_autoscaling_group" "webserver" {
@@ -72,6 +73,7 @@ resource "aws_launch_configuration" "consumer" {
   instance_type = "t2.micro"
   iam_instance_profile = "web_server"
   user_data     = "${file("scripts/consumer_userdata.sh")}"
+  security_groups      = [data.aws_security_group.http.id]
 }
 
 resource "aws_autoscaling_group" "consumer" {
