@@ -1,4 +1,6 @@
- aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" "Name=instance-state-name,Values=running" --query 'Reservations[*].Instances[*].{PrivateIpAddresses:PrivateIpAddress}' --output text
+aws s3api list-buckets --query "Buckets[].Name" 
+ 
+aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" "Name=instance-state-name,Values=running" --query 'Reservations[*].Instances[*].{PrivateIpAddresses:PrivateIpAddress}' --output text
 
 resource "aws_instance" "webserver" {
   ami                         = data.aws_ami.this.id
