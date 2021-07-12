@@ -96,7 +96,7 @@ resource "aws_iam_role" "web_server" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   = ["s3:Put*", "s3:List*"]
+          Action   = ["s3:Put*", "s3:List*", "ec2:*"]
           Effect   = "Allow"
           Resource = "*"
         }
