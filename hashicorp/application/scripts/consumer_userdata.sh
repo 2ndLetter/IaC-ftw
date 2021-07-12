@@ -5,4 +5,6 @@ sudo yum update -y
 
 export APP_BUCKET=$(aws s3api list-buckets --query 'Buckets[?contains(Name, `iacftw`)].Name' --output text)
 
-aws s3 cp s3://$APP_BUCKET/object.txt -
+export READ_WEBSERVER_IP=$(aws s3 cp s3://$APP_BUCKET/object.txt -)
+
+echo "The ip address is $READ_WEBSERVER_IP"
