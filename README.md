@@ -1,6 +1,6 @@
 # IaC-ftw
 
-Steps/Scripts: [Run from each directory]
+Steps/Scripts:
 1. [1-prep.sh] Install dependencies if required (local workstation)
 2. [2-s3-bucket-build.sh] Create s3 bucket for remote state storage [build workspace]
 3. [3-keypair.sh][option] Create keypair for ec2 instances (enter the name of the keypair you want as an option)
