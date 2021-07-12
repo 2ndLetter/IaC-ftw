@@ -21,6 +21,14 @@ bash
 # Check Installed Puppet Agent version
 sudo puppet agent --version
 
+# Install aws cli
+sudo yum install unzip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+
+
 ### Install python3 and Boto3 [temp config until Puppet is implemented]
 ##sudo yum groupinstall "Development Tools" -y
 ##sudo yum install openssl-devel libffi-devel bzip2-devel -y
