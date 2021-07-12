@@ -9,6 +9,11 @@ Steps/Scripts: [Run from each directory]
 6. [6-s3-bucket-app.sh] Create s3 bucket for remote state storage
 7. [7-deploy.sh] Deploy Application (userdata write/read to s3) <-----------
 
+Run each script in its own directory:
+- Step 1 = root directory
+- Steps 2-5 = hashicorp directory
+- Steps 6-7 = hashicorp/application directory
+
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
 - Instructions need s3 bucket for state file added (OBE)
