@@ -1,6 +1,6 @@
 # IaC-ftw
 
-scripts:
+Steps/Scripts:
 1. [1-prep.sh] Install dependencies if required (local workstation)
 2. [2-s3-bucket-build.sh] Create s3 bucket for build remote state storage
 3. [3-keypair.sh][option] Create keypair for ec2 instances (enter the name of the keypair you want as an option)
@@ -11,6 +11,6 @@ scripts:
 
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
-- Instructions need s3 bucket for state file added
+- Instructions need s3 bucket for state file added (OBE)
 - Assumes local workstation has permisisons to aws account
-- Recommend looking into WSL2 (https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+- Recommend looking into WSL2 (https://docs.microsoft.com/en-us/windows/wsl/install-win10) for local Development Environment
