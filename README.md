@@ -9,9 +9,13 @@ Steps/Scripts:
 6. [6-s3-bucket-app.sh] Create s3 bucket for remote state storage
 7. [7-deploy.sh] Deploy Application (userdata write/read to s3) <-----------
 
+Todo:
 Puppet tasks:
 - Install the latest version of python
 - Update the http configuration to direct traffic to the new EBS volume for web server content
+- Configure python script to retrieve ip address
+- Configure s3 bucket policies
+
 
 Run each script in its own directory:
 - Step 1 = root directory
