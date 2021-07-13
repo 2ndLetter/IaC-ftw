@@ -1,7 +1,7 @@
 # IaC-ftw
 
 Todo:
-- [Puppet] Update the http configuration to direct traffic to the new EBS volume for web server content
+- [Puppet] Update the web server's configuration to direct traffic to the new EBS volume for web server content
 - [Packer] Move puppet configurations to a cron job
 - [Python3] Configure script to retrieve ip address from AWS API
 - [Terraform] Configure s3 bucket policies
