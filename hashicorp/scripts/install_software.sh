@@ -38,7 +38,7 @@ sudo puppet module install puppetlabs-ntp --version 9.0.1
 sudo puppet module install puppet-python --version 6.1.0
 
 # Install boto3
-pip install boto3
+sudo pip3 install boto3
 
 # Install Puppet Apache module
 sudo puppet module install puppetlabs-apache --version 6.3.0
