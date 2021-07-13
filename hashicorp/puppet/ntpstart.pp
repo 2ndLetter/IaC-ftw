@@ -1,4 +1,4 @@
-service { 'ntp':
+service { 'ntpd':
   ensure => running,
   enable   => true,
 }
