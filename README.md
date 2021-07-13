@@ -35,4 +35,4 @@ Notes:
 - "~/.aws/credentials" example:
     [default]
     aws_access_key_id = {Access Key ID}
-    aws_secret_access_key = {<}Secret Access Key}
+    aws_secret_access_key = {Secret Access Key}
