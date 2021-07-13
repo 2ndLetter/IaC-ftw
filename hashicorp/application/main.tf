@@ -49,15 +49,15 @@ resource "aws_launch_configuration" "webserver" {
   image_id      = data.aws_ami.this.id
   instance_type = "t2.micro"
   iam_instance_profile = "web_server"
-  user_data     = "${file("scripts/webserver_userdata.sh")}"
+  user_data     = "${file("scripts/python.py")}"
   security_groups      = [data.aws_security_group.ssh.id, data.aws_security_group.http.id]
   key_name                    = var.key_name
 }
 
 resource "aws_autoscaling_group" "webserver" {
     name     = "webserver"
-    max_size    = 4
-    min_size    = 4
+    max_size    = 1
+    min_size    = 1
     launch_configuration    = aws_launch_configuration.webserver.name
     vpc_zone_identifier      = [data.aws_subnet.webserver.id]
 

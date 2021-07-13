@@ -1,7 +1,7 @@
 # IaC-ftw
 
 Todo:
-- [Python3] Configure script to retrieve ip address from AWS API
+- [Terraform] Run python script during bootup
 - [Python3] Update index.html
 - [Packer] Move consumer_userdata.sh tasks to a cron job
 - [Terraform] Configure s3 bucket policies, update IAM roles accordingly

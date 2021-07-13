@@ -2,7 +2,7 @@
 
 import boto3
 
-ec2 = boto3.client('ec2')
+ec2 = boto3.client('ec2', region_name='us-east-1')
 response = ec2.describe_instances(
     Filters=[
         {
@@ -22,7 +22,7 @@ response = ec2.describe_instances(
 
 IP=(response['Reservations'][0]['Instances'][0]['PrivateIpAddress'])
 
-print(IP)
+#print(IP)
 
 # Retrieve the list of existing buckets
 s3 = boto3.client('s3')
@@ -38,6 +38,6 @@ for line in list:
     if "iacftw" in line:
         app_bucket=line
 
-print(app_bucket)
+#print(app_bucket)
 
 s3.put_object(Body=IP, Bucket=app_bucket, Key='object.txt')
