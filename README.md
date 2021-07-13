@@ -1,5 +1,17 @@
 # IaC-ftw
 
+Todo:
+- [Puppet] Update the http configuration to direct traffic to the new EBS volume for web server content
+- [Packer] Move puppet configurations to a cron job
+- [Python3] Configure script to retrieve ip address from AWS API
+- [Terraform] Configure s3 bucket policies
+- [Packer] Move consumer_userdata.sh tasks to a cron job
+
+Run each script in its own directory:
+- Step 1 = root directory
+- Steps 2-5 = hashicorp directory
+- Steps 6-7 = hashicorp/application directory
+
 Steps/Scripts:
 1. [1-prep.sh] Install dependencies if required (local workstation)
 2. [2-s3-bucket-build.sh] Create s3 bucket for remote state storage [build workspace]
@@ -8,19 +20,6 @@ Steps/Scripts:
 5. [5-bake.sh] Bake AMI (Install python3.6+, Python script for IP address, Puppet configs) <-----------
 6. [6-s3-bucket-app.sh] Create s3 bucket for remote state storage
 7. [7-deploy.sh] Deploy Application (userdata write/read to s3) <-----------
-
-Todo:
-- [Puppet] Update the http configuration to direct traffic to the new EBS volume for web server content
-- [Packer] Move puppet configurations to a cron job
-- [Python3] Configure script to retrieve ip address from AWS API
-- [Terraform] Configure s3 bucket policies
-- [Packer] Move consumer_userdata.sh tasks to a cron job
-
-
-Run each script in its own directory:
-- Step 1 = root directory
-- Steps 2-5 = hashicorp directory
-- Steps 6-7 = hashicorp/application directory
 
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available
