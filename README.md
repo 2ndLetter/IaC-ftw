@@ -10,11 +10,11 @@ Steps/Scripts:
 7. [7-deploy.sh] Deploy Application (userdata write/read to s3) <-----------
 
 Todo:
-Puppet tasks:
-- Install the latest version of python
-- Update the http configuration to direct traffic to the new EBS volume for web server content
-- Configure python script to retrieve ip address
-- Configure s3 bucket policies
+- [Puppet] Update the http configuration to direct traffic to the new EBS volume for web server content
+- [Packer] Move puppet configurations to a cron job
+- [Python3] Configure script to retrieve ip address from AWS API
+- [Terraform] Configure s3 bucket policies
+- [Packer] Move consumer_userdata.sh tasks to a cron job
 
 
 Run each script in its own directory:

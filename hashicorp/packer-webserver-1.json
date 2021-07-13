@@ -62,6 +62,10 @@
                 "manifest_file": "puppet/ntpserver.pp"
             },
             {
+                "type": "puppet-masterless",
+                "manifest_file": "puppet/pythoninstall.pp"
+            },
+            {
                 "type": "shell",
                 "scripts": [
                     "scripts/misc.sh"

@@ -34,6 +34,12 @@ aws --version
 # Install puppet ntp module
 sudo puppet module install puppetlabs-ntp --version 9.0.1
 
+# Install python module
+sudo puppet module install puppet-python --version 6.1.0
+
+# Install Apache module
+sudo puppet module install puppetlabs-apache --version 6.3.0
+
 ### Install python3 and Boto3 [temp config until Puppet is implemented]
 ##sudo yum groupinstall "Development Tools" -y
 ##sudo yum install openssl-devel libffi-devel bzip2-devel -y
