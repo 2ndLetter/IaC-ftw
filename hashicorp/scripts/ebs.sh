@@ -22,16 +22,16 @@ sleep 10
 sudo mkfs -t ext4 "$vol_group_device"1
 
 # Create new directory
-sudo mkdir /var/app
+sudo mkdir /var/www
 
 # Mount app directory on new partition
-sudo mount -t auto "$vol_group_device"1 /var/app
+sudo mount -t auto "$vol_group_device"1 /var/www
 
 # Find parition UUID
 UUID=`sudo blkid | grep "$vol_group_device"1 | awk '{print $2}' | sed -e 's/"//g'`
 
 # Edit fstab file
-echo "$UUID /var/app ext4 defaults 0 2" | sudo tee -a /etc/fstab
+echo "$UUID /var/www ext4 defaults 0 2" | sudo tee -a /etc/fstab
 
 # Create & Move index.html
 #echo '<h1><center>Infrastructure as Code FTW</center></h1>' > /tmp/index.html

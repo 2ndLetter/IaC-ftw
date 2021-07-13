@@ -1,9 +1,8 @@
 # IaC-ftw
 
 Todo:
-- [Puppet] Update the web server's configuration to direct traffic to the new EBS volume for web server content
 - [Python3] Configure script to retrieve ip address from AWS API
-- [Terraform] Update index.html
+- [Python3] Update index.html
 - [Packer] Move consumer_userdata.sh tasks to a cron job
 - [Terraform] Configure s3 bucket policies, update IAM roles accordingly
 
