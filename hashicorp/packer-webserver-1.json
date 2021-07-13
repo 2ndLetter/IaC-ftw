@@ -66,6 +66,10 @@
                 "manifest_file": "puppet/pythoninstall.pp"
             },
             {
+                "type": "puppet-masterless",
+                "manifest_file": "puppet/apache.pp"
+            },
+            {
                 "type": "shell",
                 "scripts": [
                     "scripts/misc.sh"

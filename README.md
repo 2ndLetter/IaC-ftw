@@ -2,10 +2,10 @@
 
 Todo:
 - [Puppet] Update the web server's configuration to direct traffic to the new EBS volume for web server content
-- [Packer] Move puppet configurations to a cron job
 - [Python3] Configure script to retrieve ip address from AWS API
+- [Terraform] Update index.html
 - [Packer] Move consumer_userdata.sh tasks to a cron job
-- [Terraform] Configure s3 bucket policies
+- [Terraform] Configure s3 bucket policies, update IAM roles accordingly
 
 Run each script in its own directory:
 - Step 1 = root directory

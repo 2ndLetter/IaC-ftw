@@ -34,5 +34,5 @@ UUID=`sudo blkid | grep "$vol_group_device"1 | awk '{print $2}' | sed -e 's/"//g
 echo "$UUID /var/app ext4 defaults 0 2" | sudo tee -a /etc/fstab
 
 # Create & Move index.html
-echo '<h1><center>Infrastructure as Code FTW</center></h1>' > /tmp/index.html
-sudo mv /tmp/index.html /var/www/html/
+#echo '<h1><center>Infrastructure as Code FTW</center></h1>' > /tmp/index.html
+#sudo mv /tmp/index.html /var/www/html/

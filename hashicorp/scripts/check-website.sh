@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-curl http://localhost
+#curl http://localhost

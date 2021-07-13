@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # Install apache
-sudo yum -y install httpd
+#sudo yum -y install httpd
 
 # Start & Enable apache
 sudo systemctl start httpd && sudo systemctl enable httpd
@@ -31,13 +31,13 @@ unzip awscliv2.zip
 sudo ./aws/install
 aws --version
 
-# Install puppet ntp module
+# Install Puppet ntp module
 sudo puppet module install puppetlabs-ntp --version 9.0.1
 
-# Install python module
+# Install Puppet python module
 sudo puppet module install puppet-python --version 6.1.0
 
-# Install Apache module
+# Install Puppet Apache module
 sudo puppet module install puppetlabs-apache --version 6.3.0
 
 ### Install python3 and Boto3 [temp config until Puppet is implemented]
