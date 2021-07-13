@@ -4,7 +4,7 @@
 #sudo yum -y install httpd
 
 # Start & Enable apache
-sudo systemctl start httpd && sudo systemctl enable httpd
+#sudo systemctl start httpd && sudo systemctl enable httpd
 
 # Install Puppet
 sudo rpm -Uvh https://yum.puppet.com/puppet6-release-el-7.noarch.rpm

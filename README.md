@@ -1,7 +1,7 @@
 # IaC-ftw
 
 Todo:
-- [Terraform] Run python script during bootup
+- [Packer/Terraform] Run python script during bootup (boto3 installation)
 - [Python3] Update index.html
 - [Packer] Move consumer_userdata.sh tasks to a cron job
 - [Terraform] Configure s3 bucket policies, update IAM roles accordingly
