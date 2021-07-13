@@ -1,3 +1,14 @@
+package { 'ntp':
+  ensure => installed,
+  name   => ntp,
+}
+
+EXAMPLE
+-------
+    $ puppet apply -l /tmp/manifest.log manifest.pp
+    $ puppet apply --modulepath=/root/dev/modules -e "include ntpd::server"
+    $ puppet apply --catalog catalog.json
+
 aws s3api list-buckets --query "Buckets[].Name" 
  
 aws ec2 describe-instances --filters "Name=tag:Name,Values=webserver" "Name=instance-state-name,Values=running" --query 'Reservations[*].Instances[*].{PrivateIpAddresses:PrivateIpAddress}' --output text
