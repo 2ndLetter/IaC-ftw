@@ -14,7 +14,6 @@ Puppet tasks:
 - Install the latest version of python
 - Update the http configuration to direct traffic to the new EBS volume for web server content
 
-
 Run each script in its own directory:
 - Step 1 = root directory
 - Steps 2-5 = hashicorp directory
@@ -27,3 +26,11 @@ Notes:
 - Assumes local workstation has permisisons to aws account
 - Recommend looking into WSL2 (https://docs.microsoft.com/en-us/windows/wsl/install-win10) for local Development Environment
 - Recommended courses from A Cloud Guru: TBD
+- "~/.aws/configure" example:
+    [default]
+    region = us-east-1
+    output = json
+- "~/.aws/credentials" example:
+    [default]
+    aws_access_key_id = <Access Key ID>
+    aws_secret_access_key = <Secret Access Key>
