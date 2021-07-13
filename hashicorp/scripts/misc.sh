@@ -4,4 +4,4 @@
 
 sudo systemctl status ntpd
 
-ntpq -p
+sudo ntpq -p

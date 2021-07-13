@@ -31,6 +31,8 @@ unzip awscliv2.zip
 sudo ./aws/install
 aws --version
 
+# Install puppet ntp module
+sudo puppet module install puppetlabs-ntp --version 9.0.1
 
 ### Install python3 and Boto3 [temp config until Puppet is implemented]
 ##sudo yum groupinstall "Development Tools" -y

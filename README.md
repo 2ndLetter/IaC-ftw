@@ -10,7 +10,6 @@ Steps/Scripts:
 7. [7-deploy.sh] Deploy Application (userdata write/read to s3) <-----------
 
 Puppet tasks:
-- Configure NTP to point to google NTP servers
 - Install the latest version of python
 - Update the http configuration to direct traffic to the new EBS volume for web server content
 

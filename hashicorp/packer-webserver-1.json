@@ -58,6 +58,10 @@
                 "manifest_file": "puppet/ntpstart.pp"
             },
             {
+                "type": "puppet-masterless",
+                "manifest_file": "puppet/ntpserver.pp"
+            },
+            {
                 "type": "shell",
                 "scripts": [
                     "scripts/misc.sh"
