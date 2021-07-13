@@ -54,6 +54,10 @@
                 "manifest_file": "puppet/ntpinstall.pp"
             },
             {
+                "type": "puppet-masterless",
+                "manifest_file": "puppet/ntpstart.pp"
+            },
+            {
                 "type": "shell",
                 "scripts": [
                     "scripts/misc.sh"
