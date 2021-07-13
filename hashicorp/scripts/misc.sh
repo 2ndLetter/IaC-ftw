@@ -3,3 +3,5 @@
 #/bin/false
 
 sudo systemctl status ntpd
+
+ntpq -p

@@ -1,3 +1,56 @@
+node default {
+  class { 'ntp':
+        servers => ['time.google.com'],
+  }
+}
+
+=============================
+
+    1  vim ntpservers.pp
+    2  yum install vim -y
+    3  vim ntpserver.pp
+    4  puppet apply ntpserver.pp 
+    5  puppet module install puppetlabs-ntp --version 9.0.1
+    6  cd /etc/puppetlabs/code/environments/production/manifests/
+    7  ls
+    8  vim site.pp
+    9  puppet agent -t
+   10  puppet apply /etc/puppetlabs/code/environments/production/manifests/site.pp 
+   11  timedatectl
+   12  systemctl status ntpd
+   13  systemctl status ntpd -l
+   14  vim site.pp
+   15  puppet apply /etc/puppetlabs/code/environments/production/manifests/site.pp 
+   16  systemctl status ntpd -l
+   17  timedatectl
+   18  systemctl status ntpd -l
+   19  ping time.google.com
+   20  vim site.pp
+   21  puppet apply site.pp 
+   22  vim site.pp
+   23  puppet apply site.pp 
+   24  systemctl status ntpd -l
+   25  timedatectl
+   26  tail /var/log/ntpstats/
+   27  vim /etc/ntp.conf 
+   28  systemctl status ntpd
+   29  sysetmctl restart ntpd
+   30  systemctl restart ntpd
+   31  timedatectl
+   32  syetmctl stop ntp
+   33  syetmctl stop ntpd
+   34  systemctl stop ntpd
+   35  systemctl start ntpd
+   36  systemctl status ntpd
+   37  timedatectl
+   38  ntpq -p
+   39  date -R
+   40  history
+
+=============================
+
+
+
 package { 'ntp':
   ensure => installed,
   name   => ntp,

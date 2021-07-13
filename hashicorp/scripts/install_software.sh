@@ -21,6 +21,9 @@ bash
 # Check Installed Puppet Agent version
 sudo puppet agent --version
 
+# Install vim because it's the best
+sudo yum install vim -y
+
 # Install aws cli
 sudo yum install unzip -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
