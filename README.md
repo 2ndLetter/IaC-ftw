@@ -4,8 +4,9 @@ Todo:
 - [Puppet] Update the web server's configuration to direct traffic to the new EBS volume for web server content
 - [Packer] Move puppet configurations to a cron job
 - [Python3] Configure script to retrieve ip address from AWS API
-- [Terraform] Configure s3 bucket policies
 - [Packer] Move consumer_userdata.sh tasks to a cron job
+- [Terraform] Configure s3 bucket policies
+
 
 Run each script in its own directory:
 - Step 1 = root directory
@@ -34,5 +35,5 @@ Notes:
     output = json
 - "~/.aws/credentials" example:
     [default]
-    aws_access_key_id = <Access Key ID>
-    aws_secret_access_key = <Secret Access Key>
+    aws_access_key_id = {Access Key ID}
+    aws_secret_access_key = {<}Secret Access Key}
