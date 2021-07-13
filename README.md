@@ -7,7 +7,6 @@ Todo:
 - [Packer] Move consumer_userdata.sh tasks to a cron job
 - [Terraform] Configure s3 bucket policies
 
-
 Run each script in its own directory:
 - Step 1 = root directory
 - Steps 2-5 = hashicorp directory
