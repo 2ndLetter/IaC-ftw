@@ -47,17 +47,7 @@
             },
             {
                 "type": "puppet-masterless",
-                "manifest_file": "puppet/chronyd.pp"
-            },
-            {
-                "type": "puppet-masterless",
-                "manifest_file": "puppet/ntpinstall.pp"
-            },
-            {
-                "type": "shell",
-                "scripts": [
-                    "scripts/misc.sh"
-                ]
+                "manifest_file": "puppet/manifest.pp"
             }
     ]
 }
