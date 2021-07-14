@@ -175,7 +175,18 @@ resource "aws_s3_bucket_policy" "b" {
       {
         Sid       = "consumer_read"
         Effect    = "Allow"
-        Principal = "*"
+        Principal = {
+          "AWS": "${aws_iam_role.consumer.arn}"
+        }
+        Action    = "s3:*"
+        Resource = [
+          aws_s3_bucket.b.arn,
+          "${aws_s3_bucket.b.arn}/*",
+        ]
+      },
+      {
+        Sid       = "webserver_write"
+        Effect    = "Allow"
         Principal = "*"
         Action    = "s3:*"
         Resource = [
