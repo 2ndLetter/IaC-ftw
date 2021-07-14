@@ -3,7 +3,7 @@
 #/bin/false
 
 # Install boto3
-pip3 install boto3
+sudo pip3 install boto3
 #pip3 install boto3 --user
 
 # Check ntp configuration
