@@ -10,12 +10,12 @@ Run each script in its own directory:
 
 Steps/Scripts:
 Optional Prep = [prep.sh] Install dependencies if required (local workstation)
-1. [1-s3-bucket-build.sh] Create s3 bucket for remote state storage [build workspace]
-2. [2-keypair.sh][option] Create keypair for ec2 instances (enter the name of the keypair you want as an option)
-3. [3-build.sh][new_bucket] Build environment (use "./3-build.sh new_bucket" when creating the s3 bucket) (bucket policies) <-----------
-4. [4-bake.sh] Bake AMI (Install python3.6+, Python script for IP address, Puppet configs) <-----------
+1. [1-s3-bucket-build.sh] Create s3 bucket for remote state storage
+2. [2-keypair.sh][key-name] Create keypair for ec2 instances [example: "./2-keypair My-EC2-Key"]
+3. [3-build.sh][new_bucket] Build environment, use option when running the first time [example: "./3-build.sh new_bucket]
+4. [4-bake.sh] Bake AMI
 5. [5-s3-bucket-app.sh] Create s3 bucket for remote state storage
-6. [6-deploy.sh] Deploy Application (userdata write/read to s3) <-----------
+6. [6-deploy.sh] Deploy Application
 
 Notes:
 - vpc cidr 10.0.0.0/16 needs to be available

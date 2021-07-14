@@ -175,7 +175,7 @@ resource "aws_s3_bucket_policy" "b" {
         Principal = {
           "AWS": "${aws_iam_role.web_server.arn}"
         }
-        Action    = "s3:P*"
+        Action    = ["s3:P*", "s3:L*"]
         Resource = [
           aws_s3_bucket.b.arn,
           "${aws_s3_bucket.b.arn}/*",
