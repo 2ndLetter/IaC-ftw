@@ -1,7 +1,6 @@
 # IaC-ftw
 
 Todo:
-- [Python3] Update index.html [check work]
 - [Packer] Move consumer_userdata.sh tasks to a cron job
 - [Terraform] Configure s3 bucket policies, update IAM roles accordingly
 
