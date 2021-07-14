@@ -3,8 +3,10 @@
 
 #sudo yum update -y
 
-export APP_BUCKET=$(aws s3api list-buckets --query 'Buckets[?contains(Name, `iacftw`)].Name' --output text)
+echo "*/1 * * * * /opt/scripts/consume.sh" > /tmp/consume
 
-export READ_WEBSERVER_IP=$(aws s3 cp s3://$APP_BUCKET/object.txt -)
+sudo mv /tmp/consume /etc/cron.d/consume
 
-echo "The ip address is $READ_WEBSERVER_IP" > /var/www/html/index.html
+sudo chown root: /etc/cron.d/consume
+
+sudo chmod 0644 /etc/cron.d/consume
