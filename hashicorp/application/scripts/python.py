@@ -42,5 +42,5 @@ for line in list:
 
 s3.put_object(Body=IP, Bucket=app_bucket, Key='object.txt')
 
-with open("/var/www/index.html", "w") as f:
+with open("/tmp/index.html", "w") as f:
     f.write("<h1><center>Infrastructure as Code FTW - Webserver 1 = %s</center></h1>" %(IP))
