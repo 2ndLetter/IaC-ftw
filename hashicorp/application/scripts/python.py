@@ -44,3 +44,5 @@ s3.put_object(Body=IP, Bucket=app_bucket, Key='object.txt')
 
 with open("/tmp/index.html", "w") as f:
     f.write("<h1><center>Infrastructure as Code FTW - Webserver 1 = %s</center></h1>" %(IP))
+
+shutil.move("/tmp/index.html", "/var/www/html/index.html")
