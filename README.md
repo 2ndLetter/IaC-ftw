@@ -1,7 +1,6 @@
 # IaC-ftw
 
-Todo:
-- [Terraform] THE LAST ITEM I HAVE TO ADDRESS IS THE BUCKET POLICY (ETC 7/14)
+READY FOR REVIEW !!
 
 Run each script in its own directory:
 - Prep = root directory
@@ -14,6 +13,9 @@ Optional Prep = [prep.sh] Install dependencies if required (local workstation)
 2. [2-keypair.sh][key-name] Create keypair for ec2 instances [example: "./2-keypair My-EC2-Key"]
 3. [3-build.sh][new_bucket] Build environment, use option when running the first time [example: "./3-build.sh new_bucket]
 4. [4-bake.sh] Bake AMI
+
+- cd application
+
 5. [5-s3-bucket-app.sh] Create s3 bucket for remote state storage
 6. [6-deploy.sh] Deploy Application
 
