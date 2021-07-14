@@ -9,7 +9,7 @@ packer validate packer-webserver-1.json
 sleep 5
 
 # Build AMI
-packer build -debug \
+packer build \
 -var "aws_subnet_id=$aws_subnet_id" \
 -var "aws_security_group=$aws_security_group" \
 packer-webserver-1.json
