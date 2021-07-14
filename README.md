@@ -1,7 +1,7 @@
 # IaC-ftw
 
 Todo:
-- [Terraform] Configure s3 bucket policies, update IAM roles accordingly [IP]
+- [Terraform] THE LAST ITEM I HAVE TO ADDRESS IS THE BUCKET POLICY (ETC 7/14)
 
 Run each script in its own directory:
 - Prep = root directory
