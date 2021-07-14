@@ -1,7 +1,7 @@
 # IaC-ftw
 
 Todo:
-- [Packer] Move consumer_userdata.sh tasks to a cron job
+- [Packer] Move consumer_userdata.sh tasks to a cron job [check]
 - [Terraform] Configure s3 bucket policies, update IAM roles accordingly
 
 Run each script in its own directory:

@@ -36,9 +36,14 @@
     ],
     "provisioners": [
             {
+            "type": "file",
+            "source": "scripts/consume.sh",
+            "destination": "/tmp/consume.sh"
+            },
+            {
                 "type": "shell",
                 "scripts": [
-                    "scripts/yum_update.sh",
+                    "scripts/cron_prep.sh",
                     "scripts/install_software.sh",
                     "scripts/check-website.sh",
                     "scripts/ebs.sh",
