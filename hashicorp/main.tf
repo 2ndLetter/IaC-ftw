@@ -96,7 +96,7 @@ resource "aws_iam_role" "web_server" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   = ["s3:Put*", "s3:List*", "ec2:*"]
+          Action   = ["ec2:*"]
           Effect   = "Allow"
           Resource = "*"
         }
@@ -132,21 +132,6 @@ resource "aws_iam_role" "consumer" {
       },
     ]
   })
-
-  inline_policy {
-    name = "inline_policy_read"
-
-    policy = jsonencode({
-      Version = "2012-10-17"
-      Statement = [
-        {
-          Action   = ["s3:Get*", "s3:List*"]
-          Effect   = "Allow"
-          Resource = "*"
-        }
-      ]
-    })
-  }
 
   tags = {
     tag-key = "consumer"
