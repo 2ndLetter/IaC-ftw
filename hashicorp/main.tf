@@ -117,8 +117,6 @@ resource "aws_iam_instance_profile" "web_server" {
 resource "aws_iam_role" "consumer" {
   name = "consumer"
 
-  # Terraform's "jsonencode" function converts a
-  # Terraform expression result to valid JSON syntax.
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -166,36 +164,44 @@ resource "aws_s3_bucket" "b" {
 resource "aws_s3_bucket_policy" "b" {
   bucket = aws_s3_bucket.b.id
 
-  # Terraform's "jsonencode" function converts a
-  # Terraform expression's result to valid JSON syntax.
   policy = jsonencode({
     Version = "2012-10-17"
     Id      = "MYBUCKETPOLICY"
     Statement = [
       {
         Sid       = "consumer_read"
+        Action    = [
+          "s3:L*",
+          "s3:G*"
+          ],
         Effect    = "Allow"
-        Principal = {
-          "AWS": "${aws_iam_role.consumer.arn}"
-        }
-        Action    = ["s3:G*", "s3:L*"]
         Resource = [
           aws_s3_bucket.b.arn,
           "${aws_s3_bucket.b.arn}/*",
         ]
+        Principal = {
+          "AWS": [
+            "${aws_iam_role.consumer.arn}"
+          ]
+        }
       },
       {
         Sid       = "webserver_write"
+        Action    = [
+          "s3:G*",
+          "s3:P*"
+          ],
         Effect    = "Allow"
-        Principal = {
-          "AWS": "${aws_iam_role.web_server.arn}"
-        }
-        Action    = ["s3:P*", "s3:L*"]
         Resource = [
           aws_s3_bucket.b.arn,
           "${aws_s3_bucket.b.arn}/*",
         ]
-      },
+        Principal = {
+          "AWS": [
+            "${aws_iam_role.web_server.arn}"
+          ]
+        }
+      }
     ]
   })
 }
