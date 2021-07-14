@@ -3,7 +3,7 @@
 
 #sudo yum update -y
 
-echo "*/1 * * * * /opt/scripts/consume.sh" > /tmp/consume
+echo "* * * * * root /opt/scripts/consume.sh" > /tmp/consume
 
 sudo mv /tmp/consume /etc/cron.d/consume
 
