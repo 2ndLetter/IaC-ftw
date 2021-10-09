@@ -81,16 +81,4 @@ The following tasks are designed to build upon the previous step:
 ## Final State
 The following is a depiction of what should be deployed from code for Step 6 and ultimately be committed to GitHub per below.  The diagram does not include all details (i.e., bucket policies, location of scripts, IAM role policies, etc.); those details need to be culled from the steps tasks above.
 
-![Step 6 Diagram](https://github.com/friedms/barn_proving_ground/blob/master/ProvingGround.png?raw=true)
-
-## Next Steps
-Upon successful completion of the final task, please perform the following steps in order:
-1.  Commit your code to a private GitHub (https://github.com); there is no charge to create an account and repository.  The code committed should enable a collaborator to clone the project and deploy the solution to an AWS environment.
-2.  Add the following GitHub users as Collaborators:
-    - friedms (Marc F.)
-    - mfmjos (David C.)
-3.  Send an e-mail to the following to let them know you're ready for a code review:
-    - marc@TechnologySystems.com
-    - dacompton@gmail.com
-
 Upon successful verification of the code you will be granted access to the infrastructure on the customer network.
